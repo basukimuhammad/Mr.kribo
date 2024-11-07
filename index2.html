@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Page</title>
+</head>
+<body>
+<script>
+  // Check for audio permission
+  if (sessionStorage.getItem('audioAllowed') === 'true') {
+    const audio = new Audio('https://e.top4top.io/m_2075qemzr0.mp3');
+    audio.play();
+    sessionStorage.removeItem('audioAllowed'); // Remove permission after playing
+  }
+</script>
+</body>
+</html>
