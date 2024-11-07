@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audio Page</title>
+<title>Projek Nyenengin Temen - Halaman 2</title>
 </head>
 <body>
+
+<!-- Konten di halaman kedua -->
+
 <script>
-  // Check for audio permission
-  if (sessionStorage.getItem('audioAllowed') === 'true') {
+  // Memeriksa izin audio dari localStorage
+  if (localStorage.getItem('audioPermission') === 'granted') {
     const audio = new Audio('https://e.top4top.io/m_2075qemzr0.mp3');
-    audio.play();
-    sessionStorage.removeItem('audioAllowed'); // Remove permission after playing
+    audio.play().catch(error => console.log('Gagal memutar audio:', error));
   }
 </script>
 </body>
