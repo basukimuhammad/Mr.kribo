@@ -152,12 +152,13 @@
   </div>
   
   <!-- Link button with custom positioning and sizing -->
-  <a href="index2.html" class="link-button" target="_blank" onclick="grantAudioPermission()">Read Linktree</a>
+<a href="index2.html" class="link-button" onclick="grantAudioPermission()">Read Linktree</a>
+</div>
 </div>
 
 <script>
   function grantAudioPermission() {
-    sessionStorage.setItem('audioAllowed', 'true');
+    localStorage.setItem('audioPermission', 'granted');
   }
   const texts = [
     { id: "name", content: "Mr.Kribo" },
